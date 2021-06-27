@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@main
-
+        run: source check.sh
       - name: Set Git Configs & Secrets
         run: |
           git config --global user.email ${GitHubMail}
