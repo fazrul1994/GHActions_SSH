@@ -45,5 +45,17 @@ jobs:
           NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
           NGROK_REGION: us
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          LLVM_NAME:
+          from_secret: LLVM_NAME
+          TG_TOKEN:
+          from_secret: TG_TOKEN
+          TG_CHAT_ID:
+          from_secret: TG_CHAT_ID
+          GH_USERNAME:
+          from_secret: GH_USERNAME
+          GH_EMAIL:
+          from_secret: GH_EMAIL
+          GH_TOKEN:
+          from_secret: GH_TOKEN
+          GH_PUSH_REPO_URL:
+          from_secret: GH_PUSH_REPO_URL
