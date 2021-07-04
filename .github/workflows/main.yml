@@ -8,8 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      GitHubMail: ${{ secrets.GitHubMail }}
-      GitHubName: ${{ secrets.GitHubName }}
+      GH_USERNAME:
+      from_secret: $GH_USERNAME
+      GH_EMAIL:
+      from_secret: $GH_EMAIL
 
     steps:
       - uses: actions/checkout@main
