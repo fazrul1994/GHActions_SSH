@@ -8,17 +8,17 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      GH_USERNAME:
-      from_secret: $GH_USERNAME
       GH_EMAIL:
       from_secret: $GH_EMAIL
+      GH_USERNAME:
+      from_secret: $GH_USERNAME
 
     steps:
       - uses: actions/checkout@main
       - name: Set Git Configs & Secrets
         run: |
-          git config --global user.email ${GitHubMail}
-          git config --global user.name ${GitHubName}
+          git config --global user.email $GH_EMAIL
+          git config --global user.name $GH_NAME
           git config --global credential.helper store
           echo "https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
       #- uses: rokibhasansagar/slimhub_actions@main
